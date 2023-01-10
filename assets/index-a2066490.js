@@ -76,7 +76,7 @@ Error generating stack: `+i.message+`
         background-color: #7A7DFE;
     }
 
-`,jm=({setMonedas:e})=>{const[t,n]=H.useState([]),[r,l]=H.useState(!1),[i,o]=H.useState(""),[u,s]=js("Elige tu moneda",Mm),[f,h]=js("Elige tu Criptomoneda",t);return H.useEffect(()=>{(async()=>{let N=(await(await fetch("https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD")).json()).Data.map(c=>({id:c.CoinInfo.Name,nombre:c.CoinInfo.FullName}));n(N)})()},[]),Ee("form",{onSubmit:m=>{m.preventDefault(),[u,f].includes("")?(l(!0),o("Todos los campos son obligatorios"),setTimeout(()=>{l(!1)},2e3)):(l(!1),e({moneda:u,criptomoneda:f}))},children:[r&&O(Fm,{mensaje:i}),O(s,{}),O(h,{}),O(Dm,{type:"submit",value:"Cotizar"})]})},Am="/assets/imagen-criptos-c0430b0f.png",$m=Se.div`
+`,jm=({setMonedas:e})=>{const[t,n]=H.useState([]),[r,l]=H.useState(!1),[i,o]=H.useState(""),[u,s]=js("Elige tu moneda",Mm),[f,h]=js("Elige tu Criptomoneda",t);return H.useEffect(()=>{(async()=>{let N=(await(await fetch("https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD")).json()).Data.map(c=>({id:c.CoinInfo.Name,nombre:c.CoinInfo.FullName}));n(N)})()},[]),Ee("form",{onSubmit:m=>{m.preventDefault(),[u,f].includes("")?(l(!0),o("Todos los campos son obligatorios"),setTimeout(()=>{l(!1)},2e3)):(l(!1),e({moneda:u,criptomoneda:f}))},children:[r&&O(Fm,{mensaje:i}),O(s,{}),O(h,{}),O(Dm,{type:"submit",value:"Cotizar"})]})},Am="/Cotizador-Criptomonedas-React/assets/imagen-criptos-c0430b0f.png",$m=Se.div`
     display: grid;
   
     @media(min-width: 500px){
